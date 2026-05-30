@@ -4,9 +4,15 @@ module.exports = {
     node: true,
     es2021: true,
   },
+  globals: {
+    browser: 'readonly',
+    $: 'readonly',
+    $$: 'readonly',
+    expect: 'readonly',
+  },
   extends: [
     'eslint:recommended',
-    'prettier', // <-- önemli: formatting kurallarını kapatır, çakışmayı önler
+    'prettier', // <-- important: disable formatting rules to avoid conflict
   ],
   parserOptions: {
     ecmaVersion: 12,
